@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container" font-family:arial; font-size: 24px; margin: 25px;
+width: 350px;
+height: 200px;
+outline: dashed 1px black;>
+<form method="post" action="/register/register">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name</label>
+    <input type="textarea" class="form-control" id="exampleFormControlInput1" placeholder="Your name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput2">Age</label>
+    <input type="textarea" class="form-control" id="exampleFormControlInput2" placeholder="Your rollno" name="rno">
+  </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput3">Gender</label>
+      <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com" name="email">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput4">Contact no</label>
+      <input type="textarea" class="form-control" id="exampleFormControlInput4" placeholder="Phone no." name="phno">
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>  
+  </form>
+</div>
+
+{% endblock body %}
